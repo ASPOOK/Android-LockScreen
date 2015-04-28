@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.util.Log;
 
 public class LockScreenReceiver extends BroadcastReceiver {
+
 	private static final String TAG = "LockScreenReceiver";
 
 	@Override

@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/new_build_resize_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff" >
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="启用锁屏"
-        android:textColor="#000000"
-        android:onClick="startLockScreen"/>
+        android:onClick="startLockScreen"
+        android:text="启动锁屏"
+        android:textColor="#000000" />
 
-	
-</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注意事项："
+        android:textColor="#000000" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="安装该锁屏程序后，按Home键时，需要将本程序设置为Launcher桌面，并选择“始终”，这也是百度锁屏等锁屏软件的关键所在"
+        android:textColor="#000000" />
+
+</LinearLayout>

@@ -17,32 +17,37 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.RelativeLayout.LayoutParams;
 
+/**
+ * 锁屏页
+ * 
+ * @author Andy
+ * 
+ */
 public class LockScreenActivity extends Activity {
 
 	private static final String TAG = "LockScreenActivity";
-	boolean inDragMode;
-	int selectedImageViewX;
-	int selectedImageViewY;
-	int windowWidth;
-	int windowHeight;
-	ImageView keyImageView;
-	ImageView lockerImageView;
-	TextView timeNow;
-	int locker_x;
-	int locker_y;
-	int[] keyPos;
+	private int windowWidth;
+	private int windowHeight;
+	private ImageView keyImageView;
+	private ImageView lockerImageView;
+	private TextView timeNow;
+	private int locker_x;
+	private int locker_y;
+	private int[] keyPos;
 	private LayoutParams layoutParams;
-	// private static final int FLAG_HOMEKEY_DISPATCHED = 0x80000000;// 屏蔽4.0+home键
+	/** 屏蔽4.0+home键, 某些机型可以，不能适用所有版本和机型 */
+	// private static final int FLAG_HOMEKEY_DISPATCHED = 0x80000000;
 
-	public static boolean isStarted = false;// 判断锁屏页面是否打开状态
+	/** 判断锁屏页面是否打开状态 */
+	public static boolean isStarted = false;//
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-
-		// this.getWindow().setFlags(FLAG_HOMEKEY_DISPATCHED
-		// ,FLAG_HOMEKEY_DISPATCHED);// 屏蔽4.0+ home键
+		// 屏蔽4.0+home键, 某些机型可以，不能适用所有版本和机型 
+		// this.getWindow().setFlags(FLAG_HOMEKEY_DISPATCHED,FLAG_HOMEKEY_DISPATCHED);// 屏蔽4.0+ home键
+		
 		getWindow().addFlags(
 				WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
 						| WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
@@ -50,7 +55,6 @@ public class LockScreenActivity extends Activity {
 		setContentView(R.layout.main);
 
 		isStarted = true;
-
 		keyImageView = (ImageView) findViewById(R.id.key);
 		timeNow = (TextView) findViewById(R.id.time);
 		timeNow.setText(TimeUtils.getTime());
@@ -170,7 +174,7 @@ public class LockScreenActivity extends Activity {
 
 	@Override
 	public void onAttachedToWindow() {
-		this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD);// Android4.0一下屏蔽Home键
+		this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD);// Android4.0以下屏蔽Home键
 		super.onAttachedToWindow();
 	}
 
@@ -189,8 +193,7 @@ public class LockScreenActivity extends Activity {
 	 * 震动
 	 */
 	private void virbate() {
-		Vibrator vibrator = (Vibrator) this
-				.getSystemService(Context.VIBRATOR_SERVICE);
+		Vibrator vibrator = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
 		vibrator.vibrate(200);
 	}
 
