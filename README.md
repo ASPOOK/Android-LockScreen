@@ -1,4 +1,4 @@
-Android_LockScreen
+Android-LockScreen
 ==================
 
 参考百度锁屏的实现原理，实现的Android锁屏示例，支持“屏蔽”4.0+的Home键
@@ -7,4 +7,4 @@ Android_LockScreen
 锁屏界面示意（将钥匙图标拖动到锁位置即可解锁）
 =============================================
 
- ![image](https://github.com/aspook/Android_LockScreen/raw/master/screenshot/android_lock_screen.png)
+ ![image](https://github.com/aspook/Android-LockScreen/raw/master/screenshot/android_lock_screen.png)
