@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android-LockScreen</string>
+    <string name="btn_text">start lock screen</string>
+    <string name="tv_title">注意事项：</string>
+    <string name="tv_tip">click the above key image to unlock screen</string>
+    <string name="tv_notes">安装该锁屏程序后，按Home键时，需要将本程序设置为Launcher桌面，并选择“始终”，如果不选择“始终”，下一次按下Home键时还会弹出选择框，这也是百度锁屏等锁屏软件的关键所在。
+    \n\n Note:\n
+        After installed this app, when you press the home button,you should select this app as the launcher and choose "Always", otherwise this dialog will show again when press home button next time.
+    </string>
+</resources>

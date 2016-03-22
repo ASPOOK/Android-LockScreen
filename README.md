@@ -1,11 +1,15 @@
-Android-LockScreen
-==================
+## Android-LockScreen ##
 
-参考百度锁屏的实现原理，实现的Android锁屏示例，支持“屏蔽”4.0+的Home键<br/>
+### 应用图标 ###
 
-关于锁屏的原理及实现可以参考这里：http://blog.csdn.net/ahence/article/details/25400911<br/>
+![image](https://github.com/aspook/Android-LockScreen/raw/master/screenshot/ic_launcher.png)
 
-锁屏界面示意（将钥匙图标拖动到锁位置即可解锁）
-=============================================
+### 实现原理 ###
 
- ![image](https://github.com/aspook/Android-LockScreen/raw/master/screenshot/android_lock_screen.png)
+参考百度锁屏、Go锁屏的原理，实现了上述各版本通用的锁屏示例app。支持“屏蔽”Android 4.0+的Home键，注意并非是真正的屏蔽，因为4.0之后，系统不允许在应用层屏蔽Home键，这里只是采用了一种巧妙的方式来绕过，就像是屏蔽了Home键一样。
+
+详细的原理及实现可参考[本人博客](http://blog.csdn.net/ahence/article/details/25400911)。
+
+### 锁屏效果 ###
+
+ ![image](https://github.com/aspook/Android-LockScreen/raw/master/screenshot/android_lock_screen.jpg)
