@@ -3,7 +3,12 @@ package me.geed.util;
 /**
  * Created by Andy on 2016/3/22.
  */
-public class Validator {
+public final class Validator {
+
+    private Validator() throws InstantiationException {
+        throw new InstantiationException("This class is not for instantiation");
+    }
+
     /**
      * check whether be empty/null or not
      *

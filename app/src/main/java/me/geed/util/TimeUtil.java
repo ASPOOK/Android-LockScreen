@@ -6,7 +6,12 @@ import java.util.Date;
 /**
  * Created by Andy on 2016/3/21.
  */
-public class TimeUtil {
+public final class TimeUtil {
+    
+    private TimeUtil() throws InstantiationException {
+        throw new InstantiationException("This class is not for instantiation");
+    }
+
     /**
      * @return "HH:mm:ss"
      */
