@@ -47,8 +47,6 @@ public class LauncherHomeActivity extends Activity {
         }
 
         moveTaskToBack(false);
-
-
     }
 
     @Override

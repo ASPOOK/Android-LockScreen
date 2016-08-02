@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,10 +40,8 @@ public class LockScreenActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        getWindow().addFlags(
-//                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-//                        | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-//                        | WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
 
         setContentView(R.layout.activity_lock_screen);
 
@@ -65,7 +64,7 @@ public class LockScreenActivity extends Activity {
         try {
             startService(new Intent(this, LockScreenService.class));
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 

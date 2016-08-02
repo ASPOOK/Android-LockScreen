@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/background">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/tv_time"
@@ -11,35 +11,34 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
-        android:textSize="80sp"/>
+        android:textSize="80sp" />
 
     <ImageView
         android:id="@+id/iv_locker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@mipmap/lock"/>
+        android:src="@mipmap/lock" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
         android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/iv_key"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/key"/>
+            android:src="@mipmap/key" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_tip"/>
+            android:text="@string/tv_tip" />
     </LinearLayout>
-
 
 </RelativeLayout>
